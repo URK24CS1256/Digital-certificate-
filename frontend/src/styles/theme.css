@@ -1,0 +1,1661 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Reem+Kufi:wght@400..700&display=swap');
+
+/* ========================================
+   CERVER — PROFESSIONAL BLUE THEME
+   ======================================== */
+
+:root {
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  color: #eaf1ff;
+  background: #172033;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --cerver-primary: #2457d6;
+  --cerver-primary-hover: #1946b5;
+  --cerver-navy: #16336b;
+  --cerver-background: #172033;
+  --cerver-surface: rgba(255, 255, 255, 0.075);
+  --cerver-border: rgba(255, 255, 255, 0.22);
+  --cerver-text: #eaf1ff;
+  --cerver-muted: #b8c7e3;
+  --cerver-success: #146c35;
+  --cerver-danger: #b42332;
+  --cerver-radius: 14px;
+  --cerver-shadow: 0 8px 28px rgba(28, 55, 100, 0.07);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(
+      ellipse at 8% 5%,
+      rgba(114, 164, 255, 0.12),
+      transparent 36%
+    ),
+    radial-gradient(
+      ellipse at 92% 88%,
+      rgba(87, 151, 255, 0.10),
+      transparent 34%
+    ),
+    var(--cerver-background);
+  color: var(--cerver-text);
+  font-family: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========================================
+   ROOT CONTAINER
+   ======================================== */
+
+#root {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--cerver-navy);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+p,
+li,
+label {
+  line-height: 1.65;
+}
+
+p {
+  color: inherit;
+}
+
+a {
+  color: var(--cerver-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--cerver-primary-hover);
+}
+
+/* ========================================
+   BOOTSTRAP TEXT UTILITIES
+   ======================================== */
+
+.text-primary {
+  color: var(--cerver-primary) !important;
+}
+
+.text-secondary,
+.text-muted {
+  color: var(--cerver-muted) !important;
+}
+
+.text-dark {
+  color: #172b4d !important;
+}
+
+.text-body {
+  color: var(--cerver-text) !important;
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.btn {
+  min-height: 40px;
+  padding: 0.6rem 1.05rem;
+  border-radius: 9px;
+  font-weight: 600;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--cerver-primary);
+  border-color: var(--cerver-primary);
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background-color: var(--cerver-primary-hover);
+  border-color: var(--cerver-primary-hover);
+  color: #fff;
+}
+
+.btn-outline-primary {
+  border-color: #a9bfea;
+  color: var(--cerver-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--cerver-primary);
+  border-color: var(--cerver-primary);
+  color: #fff;
+}
+
+.btn-outline-danger {
+  border-color: #dc8b94;
+  color: #a51f2d;
+}
+
+.btn-outline-danger:hover {
+  background-color: #b42332;
+  border-color: #b42332;
+  color: #fff;
+}
+
+.btn:focus-visible {
+  box-shadow: 0 0 0 4px rgba(36, 87, 214, 0.18);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+/* ========================================
+   CARDS
+   ======================================== */
+
+.card {
+  overflow: hidden;
+  background: var(--cerver-surface);
+  color: var(--cerver-text);
+  border: 1px solid var(--cerver-border);
+  border-radius: var(--cerver-radius);
+  box-shadow: var(--cerver-shadow);
+}
+
+.card-body {
+  color: var(--cerver-text);
+  padding: 1.5rem;
+}
+
+.card-title {
+  color: var(--cerver-navy);
+}
+
+.card-text {
+  color: #465a75;
+}
+
+/* ========================================
+   DARK SURFACES
+   ======================================== */
+
+.bg-dark {
+  background-color: var(--cerver-navy) !important;
+  color: #fff !important;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4,
+.bg-dark h5,
+.bg-dark h6,
+.bg-dark p,
+.bg-dark label {
+  color: #fff;
+}
+
+.bg-dark .text-white,
+.bg-dark .text-white-50 {
+  color: #fff !important;
+}
+
+.bg-dark .text-white-50 {
+  opacity: 0.85;
+}
+
+.bg-dark a:not(.btn) {
+  color: #dbe7ff;
+}
+
+.bg-dark a:not(.btn):hover {
+  color: #fff;
+}
+
+/* ========================================
+   FORMS
+   ======================================== */
+
+.form-control,
+.form-select {
+  min-height: 44px;
+  border: 1px solid #cbd7e8;
+  border-radius: 9px;
+  color: var(--cerver-text);
+  background-color: #fff;
+}
+
+.form-control::placeholder {
+  color: #687891;
+  opacity: 1;
+}
+
+.form-control:focus,
+.form-select:focus {
+  color: var(--cerver-text);
+  background-color: #fff;
+  border-color: #7da1f4;
+  box-shadow: 0 0 0 4px rgba(36, 87, 214, 0.12);
+}
+
+.form-label {
+  margin-bottom: 0.45rem;
+  color: var(--cerver-text);
+  font-weight: 600;
+}
+
+textarea.form-control {
+  min-height: 110px;
+}
+
+.form-check-label {
+  color: var(--cerver-text);
+}
+
+/* ========================================
+   TABLES
+   ======================================== */
+
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--cerver-text);
+  --bs-table-border-color: #e6edf6;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.table thead th {
+  padding: 0.95rem 1rem;
+  background: #edf3ff;
+  color: #304968;
+  border-bottom: 1px solid var(--cerver-border);
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.table tbody td {
+  padding: 1rem;
+  color: var(--cerver-text);
+  border-color: #e6edf6;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* ========================================
+   ALERTS AND BADGES
+   ======================================== */
+
+.alert {
+  border-radius: 10px;
+}
+
+.alert-success {
+  color: #14532d;
+}
+
+.alert-danger {
+  color: #842029;
+}
+
+.badge {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+
+.nav-link {
+  color: #304968;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--cerver-primary);
+}
+
+.nav-link:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(36, 87, 214, 0.4);
+  outline-offset: 3px;
+}
+
+/* ========================================
+   ACCESSIBLE SELECTION
+   ======================================== */
+
+::selection {
+  background: #dbe7ff;
+  color: var(--cerver-navy);
+}
+
+/* ========================================
+   CERVER — ANIMATED WORDMARK
+   ======================================== */
+
+.cerver-brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  text-decoration: none;
+  line-height: 1;
+  animation: cerver-brand-enter 650ms ease-out both;
+  transition: transform 250ms ease;
+}
+
+.cerver-brand-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: #16336b;
+}
+
+.cerver-brand-name span:first-child {
+  animation: cerver-line-enter 500ms ease-out 100ms both;
+}
+
+.cerver-brand-name span:last-child {
+  animation: cerver-line-enter 500ms ease-out 220ms both;
+}
+
+/* Continuously moving underline */
+
+.cerver-brand-accent {
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin-left: 2px;
+  border-radius: 99px;
+
+  background: linear-gradient(
+    90deg,
+    #2457d6 0%,
+    #72a4ff 25%,
+    #ffffff 50%,
+    #72a4ff 75%,
+    #2457d6 100%
+  );
+
+  background-size: 200% 100%;
+  animation: cerver-line-move 2s linear infinite;
+}
+
+@keyframes cerver-line-move {
+  from {
+    background-position: 100% 0;
+  }
+
+  to {
+    background-position: -100% 0;
+  }
+}
+
+/* Logo hover effect */
+
+.cerver-brand:hover,
+.cerver-brand:focus-visible {
+  transform: translateY(-3px) scale(1.04);
+}
+
+.cerver-brand:hover .cerver-brand-name {
+  color: #2457d6;
+  transition: color 250ms ease;
+}
+
+/* Light logo for dark backgrounds */
+
+.cerver-brand-light .cerver-brand-name {
+  color: #ffffff;
+}
+
+.cerver-brand-light:hover .cerver-brand-name {
+  color: #dbe7ff;
+}
+
+.cerver-brand-light .cerver-brand-accent {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #91b9ff 50%,
+    #ffffff 100%
+  );
+
+  background-size: 200% 100%;
+}
+
+/* ========================================
+   LOGO ENTRANCE ANIMATIONS
+   ======================================== */
+
+@keyframes cerver-brand-enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cerver-line-enter {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========================================
+   KEYBOARD ACCESSIBILITY
+   ======================================== */
+
+.cerver-brand:focus-visible {
+  outline: 2px solid #2457d6;
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+
+/* ========================================
+   MOBILE RESPONSIVENESS
+   ======================================== */
+
+@media (max-width: 576px) {
+  .cerver-brand-name {
+    font-size: 1.7rem;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION ACCESSIBILITY
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .cerver-brand,
+  .cerver-brand-name span:first-child,
+  .cerver-brand-name span:last-child,
+  .cerver-brand-accent {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .cerver-brand:hover,
+  .cerver-brand:focus-visible {
+    transform: none;
+  }
+}
+
+/* =====================================================
+   CERVER — DARK LIQUID GLASS SYSTEM
+   No dependencies. Existing layout and logo preserved.
+   ===================================================== */
+
+:root {
+  --glass-white: rgba(255, 255, 255, 0.065);
+  --glass-white-strong: rgba(255, 255, 255, 0.105);
+  --glass-border: rgba(208, 225, 255, 0.19);
+  --glass-highlight: rgba(255, 255, 255, 0.27);
+  --glass-shadow: 0 18px 55px rgba(0, 0, 0, 0.22);
+  --glass-blur: 12px;
+}
+
+html {
+  background: #111827;
+}
+
+body {
+  isolation: isolate;
+  color: #eaf1ff;
+  background:
+    radial-gradient(ellipse at 18% 35%, rgba(42, 95, 151, 0.22), transparent 42%),
+    radial-gradient(ellipse at 72% 30%, rgba(126, 102, 35, 0.15), transparent 40%),
+    linear-gradient(125deg, #101722 0%, #172333 48%, #1c211e 100%);
+}
+
+/* Ambient colour blooms intensify and drift when the cursor enters the page. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -18%;
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.24;
+  background:
+    radial-gradient(ellipse at 18% 24%, rgba(65, 143, 255, 0.24), transparent 34%),
+    radial-gradient(ellipse at 78% 32%, rgba(224, 179, 65, 0.10), transparent 32%),
+    radial-gradient(ellipse at 55% 84%, rgba(91, 126, 255, 0.12), transparent 36%);
+}
+
+/* Fine flowing topographic lines, inspired by the reference image. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: -12%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.22;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='160' viewBox='0 0 96 160'%3E%3Cg fill='none' stroke='%23d7e4f5' stroke-width='.7' stroke-opacity='.75'%3E%3Cpath d='M4 -10 C38 22 -20 42 14 76 S-8 128 10 170'/%3E%3Cpath d='M14 -10 C48 22 -10 42 24 76 S2 128 20 170'/%3E%3Cpath d='M24 -10 C58 22 0 42 34 76 S12 128 30 170'/%3E%3Cpath d='M34 -10 C68 22 10 42 44 76 S22 128 40 170'/%3E%3Cpath d='M44 -10 C78 22 20 42 54 76 S32 128 50 170'/%3E%3Cpath d='M54 -10 C88 22 30 42 64 76 S42 128 60 170'/%3E%3Cpath d='M64 -10 C98 22 40 42 74 76 S52 128 70 170'/%3E%3Cpath d='M74 -10 C108 22 50 42 84 76 S62 128 80 170'/%3E%3Cpath d='M84 -10 C118 22 60 42 94 76 S72 128 90 170'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 96px 160px;
+  mask-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,.78) 55%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,.78) 55%, transparent 100%);
+  /* Static decorative contour pattern: no cursor-triggered animation. */
+}
+
+#root {
+  z-index: 1;
+  color: #eaf1ff;
+}
+
+/* Typography on the dark background. Glass panels get dark text below. */
+body > #root h1,
+body > #root h2,
+body > #root h3,
+body > #root h4,
+body > #root h5,
+body > #root h6 {
+  color: #f3f7ff;
+}
+
+body > #root p,
+body > #root li,
+body > #root label {
+  color: inherit;
+}
+
+.text-dark,
+.text-body {
+  color: #eaf1ff !important;
+}
+
+.text-secondary,
+.text-muted {
+  color: #b8c7e3 !important;
+}
+
+a {
+  color: #9ec2ff;
+}
+
+a:hover {
+  color: #d8e7ff;
+}
+
+/* Broad glass surfaces: cards, panels, navs, modals, dropdowns, and common wrappers. */
+.card,
+.modal-content,
+.dropdown-menu,
+.navbar,
+nav.navbar,
+.table-responsive,
+.accordion-item,
+.list-group,
+.list-group-item,
+.offcanvas,
+.popover,
+.toast {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.095), rgba(255, 255, 255, 0.025)) !important;
+  color: #edf4ff;
+  border: 1px solid var(--glass-border) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(155%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(155%);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.card,
+.modal-content,
+.dropdown-menu,
+.table-responsive,
+.accordion-item {
+  border-radius: 18px;
+}
+
+.card {
+  overflow: hidden;
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease, background 260ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.19), rgba(255, 255, 255, 0.075)) !important;
+  border-color: rgba(178, 207, 255, 0.36) !important;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.27), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.card-body,
+.card-header,
+.card-footer {
+  color: #edf4ff;
+  background: transparent !important;
+  border-color: rgba(208, 225, 255, 0.14) !important;
+}
+
+.card-title,
+.card-text,
+.card p,
+.card label,
+.card li,
+.modal-title {
+  color: #edf4ff;
+}
+
+/* Navbar remains readable and translucent. */
+.navbar,
+nav.navbar {
+  border-radius: 16px;
+  border-color: rgba(208, 225, 255, 0.18) !important;
+}
+
+.navbar .nav-link,
+nav .nav-link {
+  color: #d5e3ff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active,
+nav .nav-link:hover,
+nav .nav-link.active {
+  color: #ffffff;
+}
+
+/* Glossy buttons with a restrained highlight. */
+.btn {
+  border-radius: 11px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(135deg, #3978f6, #2457d6) !important;
+  border-color: rgba(190, 213, 255, 0.38) !important;
+  box-shadow: 0 7px 22px rgba(36, 87, 214, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.btn-outline-primary,
+.btn-outline-secondary,
+.btn-outline-danger,
+.btn-light,
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.09) !important;
+  color: #eaf1ff !important;
+  border-color: rgba(208, 225, 255, 0.28) !important;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-secondary:hover {
+  background: rgba(70, 125, 240, 0.3) !important;
+}
+
+/* Form controls stay legible and have a frosted surface. */
+.form-control,
+.form-select,
+.input-group-text {
+  color: #edf4ff !important;
+  background-color: rgba(22, 35, 57, 0.34) !important;
+  border: 1px solid rgba(183, 207, 250, 0.27) !important;
+  border-radius: 11px;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+.form-control::placeholder {
+  color: #9aafd2 !important;
+  opacity: 1;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: rgba(24, 42, 70, 0.52) !important;
+  border-color: rgba(126, 169, 255, 0.8) !important;
+  box-shadow: 0 0 0 4px rgba(55, 112, 240, 0.2), 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.form-select option {
+  color: #172b4d;
+  background: #ffffff;
+}
+
+.form-check-input {
+  background-color: rgba(255, 255, 255, 0.075);
+  border-color: rgba(208, 225, 255, 0.45);
+}
+
+.form-label,
+.form-check-label {
+  color: #dce8ff;
+}
+
+/* Table glass styling. Keep cell contrast high. */
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-color: #eaf1ff;
+  --bs-table-border-color: rgba(208, 225, 255, 0.13);
+  color: #eaf1ff;
+}
+
+.table thead th {
+  color: #eaf1ff !important;
+  background: rgba(104, 146, 222, 0.17) !important;
+  border-color: rgba(208, 225, 255, 0.18) !important;
+}
+
+.table tbody td {
+  color: #dce8ff !important;
+  background: transparent !important;
+  border-color: rgba(208, 225, 255, 0.12) !important;
+}
+
+.table tbody tr:hover > * {
+  color: #ffffff !important;
+  background: rgba(111, 157, 255, 0.10) !important;
+}
+
+/* Alerts and badges retain their semantic colors while matching glass. */
+.alert {
+  border-radius: 13px;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+.alert-success {
+  color: #c8f7d8;
+  background: rgba(20, 108, 53, 0.20);
+  border-color: rgba(91, 219, 140, 0.28);
+}
+
+.alert-danger {
+  color: #ffd7dc;
+  background: rgba(180, 35, 50, 0.20);
+  border-color: rgba(255, 130, 145, 0.28);
+}
+
+/* Glass treatment for common Bootstrap light surfaces without flattening dark heroes. */
+.bg-white,
+.bg-light,
+.list-group-item {
+  background-color: rgba(255, 255, 255, 0.065) !important;
+  color: #edf4ff !important;
+}
+
+/* Keep dark hero sections and the logo behavior intact. */
+.bg-dark {
+  background: rgba(20, 31, 50, 0.55) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(208, 225, 255, 0.13);
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4,
+.bg-dark h5,
+.bg-dark h6,
+.bg-dark p,
+.bg-dark label {
+  color: #ffffff !important;
+}
+
+.cerver-brand-name {
+  color: #f3f7ff;
+}
+
+.cerver-brand:hover .cerver-brand-name {
+  color: #bcd4ff;
+}
+
+/* Accessibility and motion preference support. */
+:focus-visible {
+  outline-color: rgba(132, 177, 255, 0.85);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .btn {
+    transition: none !important;
+  }
+
+  .card:hover,
+  .btn:hover {
+    transform: none;
+  }
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .card,
+  .modal-content,
+  .dropdown-menu,
+  .navbar,
+  nav.navbar,
+  .table-responsive {
+    background: rgba(15, 31, 60, 0.94) !important;
+  }
+}
+
+
+
+/* =====================================================
+   CERVER — HOME HERO + CERTIFICATE DECORATION
+   Static CSS artwork; no image or animation dependency.
+   ===================================================== */
+.cerver-home {
+  max-width: 1160px;
+  margin-inline: auto;
+}
+.cerver-home-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  padding: clamp(2rem, 5vw, 4.5rem);
+  overflow: hidden;
+  border: 1px solid rgba(208, 225, 255, 0.16);
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(255,255,255,.075), rgba(255,255,255,.018));
+  box-shadow: 0 24px 65px rgba(0,0,0,.16), inset 0 1px 0 rgba(255,255,255,.10);
+}
+.cerver-home-copy { position: relative; z-index: 1; text-align: left; }
+.cerver-eyebrow {
+  display: inline-flex; align-items: center; gap: .55rem;
+  padding: .42rem .75rem; margin-bottom: 1.2rem;
+  border: 1px solid rgba(153,190,255,.24); border-radius: 999px;
+  background: rgba(73,125,220,.10); color: #c7dcff;
+  font-size: .78rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
+}
+.cerver-eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #78a8ff; }
+.cerver-home-title { max-width: 650px; margin: 0 0 1rem; color: #f4f7ff !important; font-size: clamp(2.25rem, 4.5vw, 4rem); line-height: 1.08; letter-spacing: -.045em; }
+.cerver-home-title span { color: #9fc1ff; }
+.cerver-home-description { max-width: 530px; margin-bottom: 1.6rem; color: #b8c7e3; font-size: 1.08rem; }
+.cerver-home-actions { display: flex; flex-wrap: wrap; gap: .8rem; }
+.cerver-home-actions .btn { min-width: 145px; }
+.cerver-home-proof { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1.6rem; color: #aebfdd; font-size: .88rem; }
+.cerver-home-proof span::before { content: "✓"; margin-right: .45rem; color: #91c6ff; font-weight: 800; }
+.cerver-certificate-art { position: relative; display: grid; place-items: center; min-height: 310px; }
+.cerver-certificate-art::before { content: ""; position: absolute; width: 260px; height: 260px; border-radius: 50%; background: rgba(52,112,230,.12); filter: blur(16px); }
+.cerver-certificate-paper {
+  position: relative; width: min(100%, 330px); min-height: 255px; padding: 1.6rem;
+  border: 1px solid rgba(223,235,255,.56); border-radius: 8px;
+  background: linear-gradient(145deg, rgba(247,250,255,.97), rgba(214,228,250,.93));
+  color: #233a60; transform: rotate(3deg);
+  box-shadow: 0 28px 60px rgba(0,0,0,.28), 0 0 0 7px rgba(255,255,255,.035);
+}
+.cerver-certificate-paper::before { content: ""; position: absolute; inset: 9px; border: 1px solid rgba(53,93,151,.20); border-radius: 4px; pointer-events: none; }
+.cerver-paper-top { display: flex; align-items: center; justify-content: space-between; gap: .5rem; color: #4e6e9d; font-size: .63rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.cerver-paper-seal { display: grid; place-items: center; width: 43px; height: 43px; border: 2px solid #7c9ed3; border-radius: 50%; color: #315b9a; font-size: 1.2rem; }
+.cerver-paper-title { margin: 1rem 0 .25rem; color: #203c68 !important; font-family: Georgia, serif; font-size: 1.55rem; font-weight: 500; text-align: center; }
+.cerver-paper-subtitle { margin: 0; color: #637b9e !important; font-size: .7rem; text-align: center; }
+.cerver-paper-name { margin: .8rem 0 .35rem; color: #244a82 !important; font-family: Georgia, serif; font-size: 1.15rem; font-style: italic; text-align: center; }
+.cerver-paper-rule { width: 68%; height: 1px; margin: .5rem auto; background: #9db2d2; }
+.cerver-paper-footer { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin-top: 1rem; color: #647b9b; font-size: .62rem; }
+.cerver-verified-chip { position: absolute; right: -8px; bottom: 25px; display: flex; align-items: center; gap: .6rem; padding: .8rem 1rem; border: 1px solid rgba(188,220,255,.30); border-radius: 14px; background: rgba(21,39,66,.92); color: #eaf4ff; box-shadow: 0 14px 35px rgba(0,0,0,.24); }
+.cerver-verified-check { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: rgba(56,176,117,.18); color: #7de0ac; font-weight: 900; }
+.cerver-verified-chip small { display: block; color: #aebfdd; font-size: .7rem; }
+.cerver-home-features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.2rem; }
+.cerver-feature { padding: 1.35rem; border: 1px solid rgba(208,225,255,.13); border-radius: 18px; background: rgba(255,255,255,.035); }
+.cerver-feature-mark { display: grid; place-items: center; width: 38px; height: 38px; margin-bottom: .85rem; border: 1px solid rgba(155,190,255,.23); border-radius: 12px; background: rgba(71,124,225,.12); color: #a9caff; font-size: 1.1rem; }
+.cerver-feature h3 { margin: 0 0 .35rem; color: #f0f5ff !important; font-size: 1rem; }
+.cerver-feature p { margin: 0; color: #aebfdd; font-size: .9rem; }
+
+/* Admin dashboard: tidy hero and consistent action cards. */
+.cerver-admin-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; padding: clamp(1.5rem, 4vw, 2.5rem); border: 1px solid rgba(208,225,255,.15); border-radius: 22px; background: linear-gradient(120deg, rgba(53,100,185,.20), rgba(255,255,255,.025)); }
+.cerver-admin-header h1 { margin-bottom: .45rem; color: #f4f7ff !important; }
+.cerver-admin-header p { color: #b8c7e3 !important; }
+.cerver-admin-card { position: relative; height: 100%; }
+.cerver-admin-card .card-body { display: flex; flex-direction: column; align-items: flex-start; padding: 1.5rem; }
+.cerver-admin-icon { display: grid; place-items: center; width: 46px; height: 46px; margin-bottom: 1.1rem; border: 1px solid rgba(155,190,255,.22); border-radius: 14px; background: rgba(71,124,225,.12); color: #a9caff; font-size: 1.25rem; }
+.cerver-admin-card h5 { margin-bottom: .55rem; color: #f3f7ff !important; }
+.cerver-admin-card p { flex: 1; margin-bottom: 1.25rem; color: #b8c7e3 !important; }
+.cerver-admin-card .btn { margin-top: auto; }
+
+@media (max-width: 767px) {
+  .cerver-home-hero { grid-template-columns: 1fr; padding: 1.5rem; }
+  .cerver-home-copy { text-align: center; }
+  .cerver-home-description { margin-inline: auto; }
+  .cerver-home-actions, .cerver-home-proof { justify-content: center; }
+  .cerver-certificate-art { min-height: 280px; margin-top: .5rem; }
+  .cerver-home-features { grid-template-columns: 1fr; }
+  .cerver-admin-header { align-items: flex-start; flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cerver-home *, .cerver-admin-card, .cerver-admin-card * { scroll-behavior: auto !important; transition: none !important; }
+}
+
+/* =====================================================
+   CERVER UI POLISH — restrained navy/blue background,
+   lightweight home-page motion, accessible result alerts.
+   ===================================================== */
+html, body {
+  background-color: #101827 !important;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(46, 94, 174, 0.17), transparent 42%),
+    linear-gradient(145deg, #101827 0%, #151f31 55%, #111b2a 100%) !important;
+  background-attachment: fixed;
+}
+
+/* Remove the decorative contour overlay; keep the background clean and fast. */
+body::after { display: none !important; }
+body::before {
+  opacity: .16 !important;
+  inset: 0 !important;
+  background: radial-gradient(ellipse at 82% 15%, rgba(58, 116, 209, .12), transparent 38%) !important;
+}
+
+/* Home-page entrance sequence */
+@keyframes cerver-rise-in {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes cerver-soft-float {
+  0%, 100% { transform: translateY(0) rotate(3deg); }
+  50% { transform: translateY(-7px) rotate(3deg); }
+}
+@keyframes cerver-glow-in {
+  from { opacity: 0; transform: scale(.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.cerver-home > header { animation: cerver-rise-in .55s cubic-bezier(.2,.7,.2,1) both; }
+.cerver-home-hero { animation: cerver-rise-in .7s .08s cubic-bezier(.2,.7,.2,1) both; }
+.cerver-home-copy > * { animation: cerver-rise-in .55s cubic-bezier(.2,.7,.2,1) both; }
+.cerver-home-copy > *:nth-child(1) { animation-delay: .14s; }
+.cerver-home-copy > *:nth-child(2) { animation-delay: .22s; }
+.cerver-home-copy > *:nth-child(3) { animation-delay: .30s; }
+.cerver-home-copy > *:nth-child(4) { animation-delay: .38s; }
+.cerver-home-copy > *:nth-child(5) { animation-delay: .46s; }
+.cerver-certificate-paper { animation: cerver-soft-float 5.5s ease-in-out 1s infinite; }
+.cerver-verified-chip { animation: cerver-glow-in .55s .55s ease-out both; }
+.cerver-home-features .cerver-feature { animation: cerver-rise-in .6s ease-out both; transition: transform .22s ease, border-color .22s ease, background-color .22s ease, box-shadow .22s ease; }
+.cerver-home-features .cerver-feature:nth-child(1) { animation-delay: .25s; }
+.cerver-home-features .cerver-feature:nth-child(2) { animation-delay: .36s; }
+.cerver-home-features .cerver-feature:nth-child(3) { animation-delay: .47s; }
+.cerver-home-features .cerver-feature:hover {
+  transform: translateY(-5px);
+  border-color: rgba(137, 177, 255, .35);
+  background-color: rgba(255,255,255,.055);
+  box-shadow: 0 14px 30px rgba(0,0,0,.14);
+}
+.cerver-home-actions .btn { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
+.cerver-home-actions .btn:hover { transform: translateY(-2px); }
+.cerver-home-actions .btn-primary:hover { box-shadow: 0 8px 22px rgba(36,87,214,.25); }
+
+/* Strong contrast for unsuccessful certificate lookups and other error states. */
+.alert-danger {
+  color: #7f1d2d !important;
+  background: #fff0f2 !important;
+  border: 1px solid #f2a6b2 !important;
+  border-left: 5px solid #c62845 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 22px rgba(0,0,0,.12) !important;
+  opacity: 1 !important;
+  font-weight: 600;
+  text-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.alert-danger * { color: #7f1d2d !important; opacity: 1 !important; }
+.alert-success {
+  color: #14532d !important;
+  background: #ecfdf3 !important;
+  border: 1px solid #86d9a5 !important;
+  border-left: 5px solid #16834a !important;
+  border-radius: 12px !important;
+  text-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Keep the certificate ID field readable even inside dark glass panels. */
+.form-control, .form-select {
+  color: #17243b;
+  background-color: #f8fbff;
+}
+.form-control::placeholder { color: #586982; opacity: 1; }
+.form-control:focus, .form-select:focus { color: #17243b; background-color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cerver-home > header,
+  .cerver-home-hero,
+  .cerver-home-copy > *,
+  .cerver-certificate-paper,
+  .cerver-verified-chip,
+  .cerver-home-features .cerver-feature { animation: none !important; }
+  .cerver-home *, .cerver-home-features .cerver-feature, .cerver-home-actions .btn { transition: none !important; }
+}
+
+/* ==========================================
+   CERVER — LIQUID GLASS VERIFICATION RESULT
+   ========================================== */
+
+.verification-result,
+.verification-result.alert,
+.alert.alert-warning,
+.alert.alert-danger {
+  color: #f1f5ff !important;
+  background: rgba(30, 39, 66, 0.76) !important;
+  border: 1px solid rgba(255, 115, 135, 0.55) !important;
+  border-left: 5px solid #ff647c !important;
+  border-radius: 16px !important;
+
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.09),
+    0 0 18px rgba(255, 80, 110, 0.07) !important;
+
+  padding: 20px !important;
+  margin-top: 24px;
+}
+
+/* Result heading */
+.verification-result h1,
+.verification-result h2,
+.verification-result h3,
+.verification-result h4,
+.verification-result h5,
+.verification-result strong,
+.verification-result .alert-heading,
+.alert.alert-warning .alert-heading,
+.alert.alert-danger .alert-heading {
+  color: #ff8293 !important;
+  font-weight: 750;
+}
+
+/* Result message */
+.verification-result p,
+.verification-result span,
+.verification-result div,
+.alert.alert-warning,
+.alert.alert-danger {
+  color: #f1f5ff !important;
+}
+
+/* Input readability */
+.form-control {
+  color: #f1f5ff;
+}
+
+.form-control::placeholder {
+  color: #b5c3dc;
+  opacity: 1;
+}
+
+/* Accessible focus state */
+.form-control:focus {
+  border-color: #68a5ff !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .verification-result,
+  .alert.alert-warning,
+  .alert.alert-danger {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ==========================================
+   CERVER — VERIFICATION PAGE LIQUID GLASS
+   ========================================== */
+
+.verify-page {
+  color: #f1f5ff;
+  background: transparent;
+  overflow: hidden;
+}
+
+.verify-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 82px;
+  padding: 14px clamp(20px, 5vw, 72px);
+}
+
+.verify-login-btn {
+  padding: 9px 17px;
+  border: 1px solid rgba(127, 169, 255, 0.45);
+  border-radius: 10px;
+  color: #dbe8ff;
+  background: rgba(58, 102, 190, 0.13);
+  text-decoration: none;
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.verify-login-btn:hover {
+  color: #fff;
+  background: rgba(58, 102, 190, 0.28);
+  transform: translateY(-2px);
+}
+
+.verify-main {
+  position: relative;
+  z-index: 1;
+}
+
+.verify-heading {
+  animation: verify-enter 550ms ease-out both;
+}
+
+.verify-heading-icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 20px;
+  border: 1px solid rgba(105, 162, 255, 0.45);
+  border-radius: 18px;
+  color: #a9ceff;
+  background: rgba(53, 106, 205, 0.17);
+  box-shadow: 0 0 32px rgba(53, 106, 205, 0.13);
+  font-size: 30px;
+}
+
+.verify-heading h1 {
+  margin-bottom: 12px;
+  color: #f5f8ff;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
+.verify-heading p {
+  color: #b6c4df;
+  line-height: 1.7;
+}
+
+.verify-glass-card {
+  border: 1px solid rgba(190, 210, 255, 0.17);
+  border-radius: 22px;
+  background: rgba(21, 32, 55, 0.66);
+  box-shadow:
+    0 24px 65px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  animation: verify-enter 650ms ease-out 100ms both;
+}
+
+.verify-card-body {
+  padding: clamp(22px, 5vw, 42px);
+}
+
+.verify-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #e5edff;
+  font-weight: 650;
+}
+
+.verify-input {
+  display: block;
+  width: 100%;
+  min-height: 54px;
+  margin-bottom: 18px;
+  padding: 13px 16px;
+  border: 1px solid rgba(171, 196, 245, 0.27);
+  border-radius: 12px;
+  outline: none;
+  color: #f5f8ff;
+  background: rgba(6, 13, 28, 0.65);
+  font-size: 1rem;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.verify-input::placeholder {
+  color: #98a9c8;
+  opacity: 1;
+}
+
+.verify-input:focus {
+  border-color: #76a9ff;
+  box-shadow: 0 0 0 4px rgba(77, 133, 240, 0.15);
+}
+
+.verify-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 53px;
+  border: 1px solid rgba(170, 201, 255, 0.35);
+  border-radius: 12px;
+  color: white;
+  background: linear-gradient(110deg, #2459d6, #477fe9);
+  box-shadow: 0 8px 25px rgba(36, 89, 214, 0.2);
+  font-weight: 700;
+  transition: transform 200ms ease, filter 200ms ease;
+}
+
+.verify-submit-btn:hover:not(:disabled) {
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+}
+
+.verify-submit-btn:disabled {
+  cursor: wait;
+  opacity: 0.75;
+}
+
+.verify-spinner {
+  width: 17px;
+  height: 17px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: verify-spin 700ms linear infinite;
+}
+
+/* Result panel shared style */
+
+.verification-result {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 25px;
+  padding: 20px;
+  border: 1px solid transparent;
+  border-left-width: 4px;
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  animation: verify-enter 350ms ease-out both;
+}
+
+.verification-result-content {
+  min-width: 0;
+}
+
+.verification-result h4 {
+  margin: 1px 0 7px;
+  font-size: 1.08rem;
+  font-weight: 750;
+}
+
+.verification-result p {
+  margin: 0;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.verification-result-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+/* Valid — emerald glass */
+
+.verification-result--valid {
+  color: #e7fff1;
+  background: rgba(13, 72, 54, 0.55);
+  border-color: rgba(74, 222, 151, 0.38);
+  border-left-color: #4ade97;
+}
+
+.verification-result--valid h4,
+.verification-result--valid .verification-result-icon {
+  color: #6ef0ae;
+}
+
+/* Revoked — amber glass */
+
+.verification-result--revoked {
+  color: #fff5dc;
+  background: rgba(93, 57, 18, 0.55);
+  border-color: rgba(255, 190, 75, 0.4);
+  border-left-color: #ffbd4a;
+}
+
+.verification-result--revoked h4,
+.verification-result--revoked .verification-result-icon {
+  color: #ffd078;
+}
+
+/* Not found — red glass */
+
+.verification-result--not-found {
+  color: #fff0f2;
+  background: rgba(91, 29, 48, 0.62);
+  border-color: rgba(255, 100, 124, 0.42);
+  border-left-color: #ff647c;
+}
+
+.verification-result--not-found h4,
+.verification-result--not-found .verification-result-icon {
+  color: #ff8293;
+}
+
+/* Certificate details panel */
+
+.verify-details-card {
+  margin-top: 20px;
+  padding: 22px;
+  border: 1px solid rgba(190, 210, 255, 0.15);
+  border-radius: 16px;
+  background: rgba(8, 16, 32, 0.48);
+  animation: verify-enter 450ms ease-out both;
+}
+
+.verify-details-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #f0f5ff;
+  font-size: 1.05rem;
+  font-weight: 750;
+}
+
+.verify-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(190, 210, 255, 0.11);
+}
+
+.verify-detail-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.verify-detail-row > span {
+  color: #aebedb;
+}
+
+.verify-detail-row > strong {
+  color: #f2f6ff;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.verify-status-pill {
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.78rem;
+}
+
+.verify-status-pill--valid {
+  color: #6ef0ae;
+  background: rgba(30, 135, 83, 0.17);
+  border-color: rgba(74, 222, 151, 0.3);
+}
+
+.verify-status-pill--revoked {
+  color: #ff8293;
+  background: rgba(180, 35, 50, 0.17);
+  border-color: rgba(255, 100, 124, 0.3);
+}
+
+.verify-footer-note {
+  color: #9eafcd;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  animation: verify-enter 700ms ease-out both;
+}
+
+@keyframes verify-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes verify-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 576px) {
+  .verify-navbar {
+    min-height: 70px;
+    padding-inline: 18px;
+  }
+
+  .verify-detail-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .verify-detail-row > strong {
+    text-align: left;
+  }
+
+  .verification-result {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .verification-result-icon {
+    flex-basis: 35px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .verify-heading,
+  .verify-glass-card,
+  .verify-footer-note,
+  .verification-result,
+  .verify-details-card {
+    animation: none !important;
+  }
+
+  .verify-spinner {
+    animation-duration: 1.5s;
+  }
+
+  .verify-submit-btn,
+  .verify-input,
+  .verify-login-btn {
+    transition: none;
+  }
+}
+
+/* ==========================================
+   CERVER — QR CODE GLASS CARD
+   ========================================== */
+
+.verify-qr-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 22px;
+  padding: 26px 20px;
+  text-align: center;
+  border: 1px solid rgba(155, 190, 255, 0.22);
+  border-radius: 18px;
+  background: rgba(23, 39, 68, 0.55);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    0 12px 32px rgba(0, 0, 0, 0.12);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  animation: verify-enter 450ms ease-out both;
+}
+
+.verify-qr-copy h4 {
+  margin-bottom: 8px;
+  color: #edf4ff;
+  font-size: 1.15rem;
+  font-weight: 750;
+}
+
+.verify-qr-copy p {
+  max-width: 380px;
+  margin: 0;
+  color: #b9c9e5;
+  line-height: 1.65;
+}
+
+.verify-qr-code {
+  display: inline-flex;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+}
+
+.verify-qr-code svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.verify-qr-id {
+  margin: 0;
+  color: #c9d8f2;
+  font-size: 0.88rem;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   CERVER — CERTIFICATE QR CODES
+   ======================================== */
+
+.certificate-table-wrapper {
+  border-radius: 14px;
+  overflow-x: auto;
+}
+
+.certificate-table {
+  vertical-align: middle;
+}
+
+.certificate-qr-cell {
+  min-width: 155px;
+  text-align: center;
+  padding: 14px !important;
+}
+
+.certificate-qr-preview {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px;
+  border: 1px solid rgba(160, 190, 255, 0.3);
+  border-radius: 13px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(15, 35, 75, 0.12);
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.certificate-qr-preview:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(15, 35, 75, 0.18);
+}
+
+.certificate-qr-preview svg {
+  display: block;
+  width: 110px;
+  height: 110px;
+}
+
+.certificate-actions {
+  min-width: 180px;
+}
+
+@media (max-width: 576px) {
+  .certificate-qr-cell {
+    min-width: 130px;
+  }
+
+  .certificate-qr-preview svg {
+    width: 90px;
+    height: 90px;
+  }
+
+  .certificate-actions {
+    min-width: 140px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .certificate-qr-preview {
+    transition: none;
+  }
+}
